@@ -8,6 +8,7 @@
         <div class="navbar-bg"></div>
         @include('layout.navbar-atas')
         @include('layout.navbar-bawah')
+        @routes
         @inertia
         <footer class="main-footer">
             <div class="footer-left">

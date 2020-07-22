@@ -16,11 +16,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ListSMA",
   props: {
-    sma: Object
+    sma: Array
   },
   components: {
     App: _Utils_Layout_App__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -80,7 +103,64 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("App", { attrs: { topnav: "'List SMA'" } })
+  return _c("App", { attrs: { topnav: "List SMA" } }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [_c("h4")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c(
+              "ul",
+              {
+                staticClass:
+                  "list-unstyled user-progress list-unstyled-border list-unstyled-noborder"
+              },
+              _vm._l(_vm.sma, function(sma) {
+                return _c("li", { staticClass: "media" }, [
+                  _c("img", {
+                    staticClass: "mr-3 rounded-circle",
+                    attrs: { alt: "image", src: "/img/sma.png", width: "50" }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "media-body" }, [
+                    _c("div", { staticClass: "media-title" }, [
+                      _vm._v(_vm._s(sma.sekolah))
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "text-job text-muted" }, [
+                      _vm._v("Web Developer")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "media-cta" },
+                    [
+                      _c(
+                        "inertia-link",
+                        {
+                          staticClass: "btn btn-outline-primary",
+                          attrs: {
+                            href: _vm.$route("pengumuman.sma.profil", {
+                              id: sma.sma_id
+                            })
+                          }
+                        },
+                        [_vm._v("Detail")]
+                      )
+                    ],
+                    1
+                  )
+                ])
+              }),
+              0
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
