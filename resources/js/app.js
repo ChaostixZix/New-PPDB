@@ -1,6 +1,7 @@
 import { InertiaApp } from '@inertiajs/inertia-vue'
 import Vue from 'vue'
 
+
 Vue.use(InertiaApp)
 
 const app = document.getElementById('app')
@@ -12,4 +13,5 @@ new Vue({
             resolveComponent: name => import(`./Pages/${name}`).then(module => module.default),
         },
     }),
-}).$mount(app)
+}).$mount(app);
+Vue.prototype.$route = (...args) => route(...args).url();

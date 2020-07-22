@@ -8,7 +8,7 @@
                 <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i
                         class="fa fa-newspaper"></i><span>Pengumuman</span></a>
                 <ul class="dropdown-menu">
-                    <li class="nav-item"><a href="#" class="nav-link">SMA</a></li>
+                    <li class="nav-item"><a href="{{route('pengumuman.sma.list')}}" class="nav-link">SMA</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">SMK</a></li>
                 </ul>
             </li>

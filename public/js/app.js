@@ -15028,6 +15028,22 @@ var map = {
 		"./resources/js/Pages/Depan/Depan.vue",
 		0
 	],
+	"./Pengumuman/SMA/Afirmasi": [
+		"./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue",
+		2,
+		4,
+		3,
+		8,
+		11
+	],
+	"./Pengumuman/SMA/Afirmasi.vue": [
+		"./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue",
+		2,
+		4,
+		3,
+		8,
+		11
+	],
 	"./Pengumuman/SMA/ListSMA": [
 		"./resources/js/Pages/Pengumuman/SMA/ListSMA.vue",
 		1
@@ -15035,6 +15051,74 @@ var map = {
 	"./Pengumuman/SMA/ListSMA.vue": [
 		"./resources/js/Pages/Pengumuman/SMA/ListSMA.vue",
 		1
+	],
+	"./Pengumuman/SMA/PindahTugas": [
+		"./resources/js/Pages/Pengumuman/SMA/PindahTugas.vue",
+		2,
+		4,
+		3,
+		8,
+		12
+	],
+	"./Pengumuman/SMA/PindahTugas.vue": [
+		"./resources/js/Pages/Pengumuman/SMA/PindahTugas.vue",
+		2,
+		4,
+		3,
+		8,
+		12
+	],
+	"./Pengumuman/SMA/Prestasi": [
+		"./resources/js/Pages/Pengumuman/SMA/Prestasi.vue",
+		2,
+		4,
+		3,
+		8,
+		13
+	],
+	"./Pengumuman/SMA/Prestasi.vue": [
+		"./resources/js/Pages/Pengumuman/SMA/Prestasi.vue",
+		2,
+		4,
+		3,
+		8,
+		13
+	],
+	"./Pengumuman/SMA/SMA": [
+		"./resources/js/Pages/Pengumuman/SMA/SMA.vue",
+		4,
+		6
+	],
+	"./Pengumuman/SMA/SMA.vue": [
+		"./resources/js/Pages/Pengumuman/SMA/SMA.vue",
+		4,
+		6
+	],
+	"./Pengumuman/SMA/TableSMA": [
+		"./resources/js/Pages/Pengumuman/SMA/TableSMA.vue",
+		2,
+		3,
+		8
+	],
+	"./Pengumuman/SMA/TableSMA.vue": [
+		"./resources/js/Pages/Pengumuman/SMA/TableSMA.vue",
+		2,
+		3,
+		8
+	],
+	"./Pengumuman/SMA/Zonasi": [
+		"./resources/js/Pages/Pengumuman/SMA/Zonasi.vue",
+		2,
+		4,
+		3,
+		5
+	],
+	"./Pengumuman/SMA/Zonasi.vue": [
+		"./resources/js/Pages/Pengumuman/SMA/Zonasi.vue",
+		2,
+		4,
+		3,
+		5
 	]
 };
 function webpackAsyncContext(req) {
@@ -15047,7 +15131,7 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(id);
 	});
 }
@@ -15091,6 +15175,10 @@ new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   }
 }).$mount(app);
 
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.prototype.$route = function () {
+  return route.apply(void 0, arguments).url();
+};
+
 /***/ }),
 
 /***/ "./resources/sass/app.scss":
@@ -15111,8 +15199,8 @@ new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/bintangputra/Documents/Project/CBT/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/bintangputra/Documents/Project/CBT/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/chaostix/Documents/Project/New-PPDB/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/chaostix/Documents/Project/New-PPDB/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -20,7 +20,12 @@ Route::group(['prefix' => ''], function (){
     {
         Route::group(['prefix' => 'SMA'], function ()
         {
-//            Route::get('list');
+            Route::get('list', [\App\Http\Controllers\Pengumuman\SMAController::class, 'index'])->name('pengumuman.sma.list');
+            Route::get('profile/{id}', [\App\Http\Controllers\Pengumuman\SMAController::class, 'sma'])->name('pengumuman.sma.profil');
+            Route::get('prestasi/{id}', [\App\Http\Controllers\Pengumuman\SMAController::class, 'prestasi'])->name('pengumuman.sma.prestasi');
+            Route::get('pindahtugas/{id}', [\App\Http\Controllers\Pengumuman\SMAController::class, 'pindahtugas'])->name('pengumuman.sma.pindahtugas');
+            Route::get('afirmasi/{id}', [\App\Http\Controllers\Pengumuman\SMAController::class, 'afirmasi'])->name('pengumuman.sma.afirmasi');
+            Route::get('zonasi/{id}', [\App\Http\Controllers\Pengumuman\SMAController::class, 'zonasi'])->name('pengumuman.sma.zonasi');
         });
 
     });
