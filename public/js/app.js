@@ -15022,103 +15022,93 @@ module.exports = g;
 var map = {
 	"./Depan/Depan": [
 		"./resources/js/Pages/Depan/Depan.vue",
-		0
+		3
 	],
 	"./Depan/Depan.vue": [
 		"./resources/js/Pages/Depan/Depan.vue",
-		0
+		3
 	],
 	"./Pengumuman/SMA/Afirmasi": [
 		"./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue",
+		1,
+		0,
 		2,
-		4,
-		3,
-		8,
-		11
+		5
 	],
 	"./Pengumuman/SMA/Afirmasi.vue": [
 		"./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue",
+		1,
+		0,
 		2,
-		4,
-		3,
-		8,
-		11
+		5
 	],
 	"./Pengumuman/SMA/ListSMA": [
 		"./resources/js/Pages/Pengumuman/SMA/ListSMA.vue",
-		1
+		4
 	],
 	"./Pengumuman/SMA/ListSMA.vue": [
 		"./resources/js/Pages/Pengumuman/SMA/ListSMA.vue",
-		1
+		4
 	],
 	"./Pengumuman/SMA/PindahTugas": [
 		"./resources/js/Pages/Pengumuman/SMA/PindahTugas.vue",
+		1,
+		0,
 		2,
-		4,
-		3,
-		8,
-		12
+		6
 	],
 	"./Pengumuman/SMA/PindahTugas.vue": [
 		"./resources/js/Pages/Pengumuman/SMA/PindahTugas.vue",
+		1,
+		0,
 		2,
-		4,
-		3,
-		8,
-		12
+		6
 	],
 	"./Pengumuman/SMA/Prestasi": [
 		"./resources/js/Pages/Pengumuman/SMA/Prestasi.vue",
+		1,
+		0,
 		2,
-		4,
-		3,
-		8,
-		13
+		7
 	],
 	"./Pengumuman/SMA/Prestasi.vue": [
 		"./resources/js/Pages/Pengumuman/SMA/Prestasi.vue",
+		1,
+		0,
 		2,
-		4,
-		3,
-		8,
-		13
+		7
 	],
 	"./Pengumuman/SMA/SMA": [
 		"./resources/js/Pages/Pengumuman/SMA/SMA.vue",
-		4,
-		6
+		1
 	],
 	"./Pengumuman/SMA/SMA.vue": [
 		"./resources/js/Pages/Pengumuman/SMA/SMA.vue",
-		4,
-		6
+		1
 	],
 	"./Pengumuman/SMA/TableSMA": [
 		"./resources/js/Pages/Pengumuman/SMA/TableSMA.vue",
+		0,
 		2,
-		3,
-		8
+		9
 	],
 	"./Pengumuman/SMA/TableSMA.vue": [
 		"./resources/js/Pages/Pengumuman/SMA/TableSMA.vue",
+		0,
 		2,
-		3,
-		8
+		9
 	],
 	"./Pengumuman/SMA/Zonasi": [
 		"./resources/js/Pages/Pengumuman/SMA/Zonasi.vue",
-		2,
-		4,
-		3,
-		5
+		1,
+		0,
+		8
 	],
 	"./Pengumuman/SMA/Zonasi.vue": [
 		"./resources/js/Pages/Pengumuman/SMA/Zonasi.vue",
-		2,
-		4,
-		3,
-		5
+		1,
+		0,
+		8
 	]
 };
 function webpackAsyncContext(req) {

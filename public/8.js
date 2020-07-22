@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[8],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,6 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utils_Shared_Datatable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../Utils/Shared/Datatable */ "./resources/js/Utils/Shared/Datatable.vue");
 /* harmony import */ var _Utils_Shared_Pagination__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Utils/Shared/Pagination */ "./resources/js/Utils/Shared/Pagination.vue");
+/* harmony import */ var _Utils_Layout_App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Utils/Layout/App */ "./resources/js/Utils/Layout/App.vue");
+/* harmony import */ var _SMA__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SMA */ "./resources/js/Pages/Pengumuman/SMA/SMA.vue");
 //
 //
 //
@@ -59,22 +61,56 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
+    SMA: _SMA__WEBPACK_IMPORTED_MODULE_3__["default"],
+    App: _Utils_Layout_App__WEBPACK_IMPORTED_MODULE_2__["default"],
     Pagination: _Utils_Shared_Pagination__WEBPACK_IMPORTED_MODULE_1__["default"],
     Datatable: _Utils_Shared_Datatable__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   props: {
-    pesertass: Array
+    pesertass: Array,
+    datasma: Object
   },
   mounted: function mounted() {
+    this.$parent.rendering = false;
     this.load();
     var i = 0;
     var vm = this;
     this.pesertass.forEach(function (value, index) {
       i++;
+
+      if (i > vm.datasma.kuota) {
+        value.diluar = true;
+      }
+
       value.nomer = i;
       vm.pesertas.push(value);
     });
@@ -89,6 +125,14 @@ __webpack_require__.r(__webpack_exports__);
       width: '33%',
       label: 'Nama',
       name: 'nm_pes'
+    }, {
+      width: '33%',
+      label: 'Pilihan',
+      name: 'pilihan'
+    }, {
+      width: '33%',
+      label: 'Jarak',
+      name: 'jarak'
     }, {
       width: '33%',
       label: 'Status',
@@ -187,10 +231,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=template&id=38e22268&":
-/*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=template&id=38e22268& ***!
-  \*********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=template&id=b7a2c71e&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=template&id=b7a2c71e& ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -202,148 +246,202 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card-body" }, [
-    _c("div", [
-      _c(
-        "div",
-        {
-          staticClass: "dataTables_wrapper dt-bootstrap4 no-footer",
-          attrs: { id: "dataTableExample_wrapper" }
-        },
-        [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-sm-12 col-md-6" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "dataTables_filter",
-                  attrs: { id: "dataTableExample_filter" }
-                },
-                [
-                  _c("label", [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.search,
-                          expression: "search"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: { type: "search", placeholder: "Search" },
-                      domProps: { value: _vm.search },
-                      on: {
-                        input: [
-                          function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.search = $event.target.value
-                          },
-                          function($event) {
-                            return _vm.resetPagination()
-                          }
-                        ]
-                      }
-                    })
-                  ])
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-sm-12" },
-              [
-                _c(
-                  "Datatable",
-                  {
-                    attrs: {
-                      "hide-header": "false",
-                      columns: _vm.columns,
-                      sortKey: _vm.sortKey,
-                      sortOrders: _vm.sortOrders
-                    },
-                    on: { sort: _vm.sortBy }
-                  },
-                  [
-                    _c(
-                      "tbody",
-                      _vm._l(_vm.paginated, function(p) {
-                        return _c(
-                          "tr",
-                          { staticClass: "odd", attrs: { role: "row" } },
-                          [
-                            _c("td", [_vm._v(_vm._s(p.nomer))]),
-                            _vm._v(" "),
-                            _c("td", [_vm._v(_vm._s(p.nm_pes))]),
-                            _vm._v(" "),
-                            _c("td", [
-                              p.status === 0
-                                ? _c(
-                                    "a",
-                                    {
-                                      staticClass:
-                                        "btn btn-sm btn-outline-warning"
-                                    },
-                                    [
-                                      _vm._v(
-                                        "Tidak\n                                    Diterima"
-                                      )
-                                    ]
-                                  )
-                                : p.status === 1
-                                ? _c(
-                                    "a",
-                                    {
-                                      staticClass:
-                                        "btn btn-sm btn-outline-success"
-                                    },
-                                    [_vm._v("Diterima")]
-                                  )
-                                : _vm._e()
-                            ])
-                          ]
-                        )
-                      }),
-                      0
-                    )
-                  ]
-                )
-              ],
-              1
-            )
-          ]),
-          _vm._v(" "),
+  return _c("SMA", { attrs: { datasma: _vm.datasma } }, [
+    _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-header bg-info text-white" }, [
+        _vm._v("\n            Zonasi\n        ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", [
           _c(
             "div",
-            { staticClass: "row" },
+            {
+              staticClass: "dataTables_wrapper dt-bootstrap4 no-footer",
+              attrs: { id: "dataTableExample_wrapper" }
+            },
             [
-              _c("div", { staticClass: "col-sm-12 col-md-5" }),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-sm-12 col-md-6" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dataTables_filter",
+                      attrs: { id: "dataTableExample_filter" }
+                    },
+                    [
+                      _c("label", [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.search,
+                              expression: "search"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { type: "search", placeholder: "Search" },
+                          domProps: { value: _vm.search },
+                          on: {
+                            input: [
+                              function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.search = $event.target.value
+                              },
+                              function($event) {
+                                return _vm.resetPagination()
+                              }
+                            ]
+                          }
+                        })
+                      ])
+                    ]
+                  )
+                ])
+              ]),
               _vm._v(" "),
-              _c("Pagination", {
-                attrs: {
-                  pagination: _vm.pagination,
-                  client: true,
-                  filtered: _vm.filteredProjects
-                },
-                on: {
-                  prev: function($event) {
-                    --_vm.pagination.currentPage
-                  },
-                  next: function($event) {
-                    ++_vm.pagination.currentPage
-                  }
-                }
-              })
-            ],
-            1
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm-12" },
+                  [
+                    _c(
+                      "Datatable",
+                      {
+                        attrs: {
+                          "hide-header": "false",
+                          columns: _vm.columns,
+                          sortKey: _vm.sortKey,
+                          sortOrders: _vm.sortOrders
+                        },
+                        on: { sort: _vm.sortBy }
+                      },
+                      [
+                        _c(
+                          "tbody",
+                          _vm._l(_vm.paginated, function(p) {
+                            return _c(
+                              "tr",
+                              { staticClass: "odd", attrs: { role: "row" } },
+                              [
+                                p.diluar
+                                  ? _c("td", { staticClass: "bg-danger" }, [
+                                      _vm._v(_vm._s(p.nomer))
+                                    ])
+                                  : _c("td", [_vm._v(_vm._s(p.nomer))]),
+                                _vm._v(" "),
+                                _c("td", [_vm._v(_vm._s(p.nm_pes))]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  p.pilihan1 === _vm.datasma.sma_id
+                                    ? _c(
+                                        "button",
+                                        {
+                                          staticClass:
+                                            "btn btn-sm btn-info text-white"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                            Pemilih 1\n                                        "
+                                          )
+                                        ]
+                                      )
+                                    : _c(
+                                        "button",
+                                        {
+                                          staticClass:
+                                            "btn btn-sm btn-danger text-white"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                            Pemilih 2\n                                        "
+                                          )
+                                        ]
+                                      )
+                                ]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  p.pilihan1 === _vm.datasma.sma_id
+                                    ? _c("div", [
+                                        _vm._v(
+                                          "\n                                            " +
+                                            _vm._s(p.jarak1) +
+                                            " M\n                                        "
+                                        )
+                                      ])
+                                    : _c("div", [
+                                        _vm._v(
+                                          "\n                                            " +
+                                            _vm._s(p.jarak2) +
+                                            " M\n                                        "
+                                        )
+                                      ])
+                                ]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  p.status === 0
+                                    ? _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "btn btn-sm btn-outline-warning"
+                                        },
+                                        [_vm._v("Proses Verifikasi")]
+                                      )
+                                    : p.status === 1
+                                    ? _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "btn btn-sm btn-outline-success"
+                                        },
+                                        [_vm._v("Terverifikasi")]
+                                      )
+                                    : _vm._e()
+                                ])
+                              ]
+                            )
+                          }),
+                          0
+                        )
+                      ]
+                    )
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "row" },
+                [
+                  _c("div", { staticClass: "col-sm-12 col-md-5" }),
+                  _vm._v(" "),
+                  _c("pagination", {
+                    attrs: {
+                      pagination: _vm.pagination,
+                      client: true,
+                      filtered: _vm.filteredProjects
+                    },
+                    on: {
+                      prev: function($event) {
+                        --_vm.pagination.currentPage
+                      },
+                      next: function($event) {
+                        ++_vm.pagination.currentPage
+                      }
+                    }
+                  })
+                ],
+                1
+              )
+            ]
           )
-        ]
-      )
+        ])
+      ])
     ])
   ])
 }
@@ -354,17 +452,17 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Pengumuman/SMA/TableSMA.vue":
-/*!********************************************************!*\
-  !*** ./resources/js/Pages/Pengumuman/SMA/TableSMA.vue ***!
-  \********************************************************/
+/***/ "./resources/js/Pages/Pengumuman/SMA/Zonasi.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/Pages/Pengumuman/SMA/Zonasi.vue ***!
+  \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _TableSMA_vue_vue_type_template_id_38e22268___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TableSMA.vue?vue&type=template&id=38e22268& */ "./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=template&id=38e22268&");
-/* harmony import */ var _TableSMA_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TableSMA.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Zonasi_vue_vue_type_template_id_b7a2c71e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Zonasi.vue?vue&type=template&id=b7a2c71e& */ "./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=template&id=b7a2c71e&");
+/* harmony import */ var _Zonasi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Zonasi.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -374,9 +472,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _TableSMA_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _TableSMA_vue_vue_type_template_id_38e22268___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _TableSMA_vue_vue_type_template_id_38e22268___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Zonasi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Zonasi_vue_vue_type_template_id_b7a2c71e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Zonasi_vue_vue_type_template_id_b7a2c71e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -386,38 +484,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Pages/Pengumuman/SMA/TableSMA.vue"
+component.options.__file = "resources/js/Pages/Pengumuman/SMA/Zonasi.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************!*\
-  !*** ./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************/
+/***/ "./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TableSMA_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./TableSMA.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TableSMA_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Zonasi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Zonasi.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Zonasi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=template&id=38e22268&":
-/*!***************************************************************************************!*\
-  !*** ./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=template&id=38e22268& ***!
-  \***************************************************************************************/
+/***/ "./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=template&id=b7a2c71e&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=template&id=b7a2c71e& ***!
+  \*************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TableSMA_vue_vue_type_template_id_38e22268___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./TableSMA.vue?vue&type=template&id=38e22268& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/TableSMA.vue?vue&type=template&id=38e22268&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TableSMA_vue_vue_type_template_id_38e22268___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Zonasi_vue_vue_type_template_id_b7a2c71e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Zonasi.vue?vue&type=template&id=b7a2c71e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/Zonasi.vue?vue&type=template&id=b7a2c71e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Zonasi_vue_vue_type_template_id_b7a2c71e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TableSMA_vue_vue_type_template_id_38e22268___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Zonasi_vue_vue_type_template_id_b7a2c71e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
