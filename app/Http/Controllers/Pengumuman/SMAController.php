@@ -43,7 +43,7 @@ class SMAController extends Controller
     {
         $pendaftar = (new Afirmasi())->getPendaftarBySekolah($id);
         $get = (new SMA())->getById($id);
-        return Inertia::render('Pengumuman/SMA/Prestasi', [
+        return Inertia::render('Pengumuman/SMA/Afirmasi', [
             'datasma' => $get[0],
             'pesertas' => $pendaftar
         ]);
@@ -52,7 +52,7 @@ class SMAController extends Controller
     {
         $pendaftar = (new PindahTugas())->getPendaftarBySekolah($id);
         $get = (new SMA())->getById($id);
-        return Inertia::render('Pengumuman/SMA/Prestasi', [
+        return Inertia::render('Pengumuman/SMA/PindahTugas', [
             'datasma' => $get[0],
             'pesertas' => $pendaftar
         ]);
