@@ -1,1 +1,152 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{0:function(t,e,a){"use strict";function s(t,e,a,s,n,i,r,o){var c,d="function"==typeof t?t.options:t;if(e&&(d.render=e,d.staticRenderFns=a,d._compiled=!0),s&&(d.functional=!0),i&&(d._scopeId="data-v-"+i),r?(c=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),n&&n.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(r)},d._ssrRegister=c):n&&(c=o?function(){n.call(this,(d.functional?this.parent:this).$root.$options.shadowRoot)}:n),c)if(d.functional){d._injectStyles=c;var l=d.render;d.render=function(t,e){return c.call(e),l(t,e)}}else{var u=d.beforeCreate;d.beforeCreate=u?[].concat(u,c):[c]}return{exports:t,options:d}}a.d(e,"a",(function(){return s}))},1:function(t,e,a){"use strict";var s={name:"App",props:{topnav:String,breadcumb:Array}},n=a(0),i=Object(n.a)(s,(function(){var t=this,e=t.$createElement,a=t._self._c||e;return a("div",{staticClass:"main-content"},[a("section",{staticClass:"section"},[void 0!==t.topnav||void 0!==t.breadcumb?a("div",{staticClass:"section-header"},[a("h1",[t._v(t._s(t.topnav))]),t._v(" "),a("div",{staticClass:"section-header-breadcrumb"},t._l(t.breadcumb,(function(e){return a("div",{staticClass:"breadcrumb-item"},[t._v(t._s(e))])})),0)]):t._e(),t._v(" "),a("div",{staticClass:"section-body"},[t._t("default")],2)])])}),[],!1,null,"8311d476",null);e.a=i.exports},11:function(t,e,a){"use strict";a.r(e);var s={name:"Depan",data:function(){return{breadcumb:["Dashboard"]}},components:{App:a(1).a}},n=a(0),i=Object(n.a)(s,(function(){var t=this.$createElement,e=this._self._c||t;return e("App",{attrs:{topnav:"Dashboard Depan",breadcumb:this.breadcumb}},[e("div",{staticClass:"row"},[e("div",{staticClass:"col-12"},[e("div",{staticClass:"jumbotron",staticStyle:{background:"url('img/slide.jpeg')"}})]),this._v(" "),e("div",{staticClass:"col-lg-9 col-12"},[e("div",{staticClass:"card"},[e("div",{staticClass:"card-header"},[e("h4",[this._v("Selamat Datang")])]),this._v(" "),e("div",{staticClass:"card-body"},[e("p",[this._v("Selamat datang di website pengumuman PPDB SMA/SMK Provinsi Bengkulu Tahun 2020.")])]),this._v(" "),e("div",{staticClass:"card-footer bg-whitesmoke"})])])])])}),[],!1,null,"daa24e6a",null);e.default=i.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TableSMA__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TableSMA */ "./resources/js/Pages/Pengumuman/SMA/TableSMA.vue");
+/* harmony import */ var _Utils_Layout_App__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Utils/Layout/App */ "./resources/js/Utils/Layout/App.vue");
+/* harmony import */ var _SMA__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SMA */ "./resources/js/Pages/Pengumuman/SMA/SMA.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    SMA: _SMA__WEBPACK_IMPORTED_MODULE_2__["default"],
+    App: _Utils_Layout_App__WEBPACK_IMPORTED_MODULE_1__["default"],
+    TableSMA: _TableSMA__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    pesertas: Array,
+    datasma: Object
+  },
+  mounted: function mounted() {
+    this.$parent.rendering = false;
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=template&id=6fbf5eaa&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=template&id=6fbf5eaa& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("SMA", { attrs: { datasma: _vm.datasma } }, [
+    _c(
+      "div",
+      { staticClass: "card" },
+      [
+        _c("div", { staticClass: "card-header bg-info text-white" }, [
+          _vm._v("\n            Afirmasi\n        ")
+        ]),
+        _vm._v(" "),
+        _c("TableSMA", { attrs: { pesertass: _vm.pesertas } })
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Afirmasi_vue_vue_type_template_id_6fbf5eaa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Afirmasi.vue?vue&type=template&id=6fbf5eaa& */ "./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=template&id=6fbf5eaa&");
+/* harmony import */ var _Afirmasi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Afirmasi.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Afirmasi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Afirmasi_vue_vue_type_template_id_6fbf5eaa___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Afirmasi_vue_vue_type_template_id_6fbf5eaa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Pengumuman/SMA/Afirmasi.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Afirmasi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Afirmasi.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Afirmasi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=template&id=6fbf5eaa&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=template&id=6fbf5eaa& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Afirmasi_vue_vue_type_template_id_6fbf5eaa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Afirmasi.vue?vue&type=template&id=6fbf5eaa& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pengumuman/SMA/Afirmasi.vue?vue&type=template&id=6fbf5eaa&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Afirmasi_vue_vue_type_template_id_6fbf5eaa___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Afirmasi_vue_vue_type_template_id_6fbf5eaa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);
