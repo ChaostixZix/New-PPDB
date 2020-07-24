@@ -2,7 +2,7 @@
     <SMA :datasma="datasma">
         <div class="card">
             <div class="card-header bg-info text-white">
-                Prestasi
+                Jalur Prestasi
             </div>
             <TableSMA :pesertass="pesertas"></TableSMA>
         </div>
