@@ -3,10 +3,14 @@
 /public/storage
 /storage/*.key
 /vendor
-.env
+.envs
 .env.backup
-.phpunit.result.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+.idea
+.styleci.yml
+phpunit.xml
+v2.2.0.zip
+.editorconfig
